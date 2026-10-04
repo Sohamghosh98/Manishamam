@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 42 80% 88.5%;     /* 🥂 Sparkling champagne gold liquid #f9eacb */
+  --foreground: 26 42% 14%;       /* deep roasted amber-espresso #332215 */
+  --primary: 32 90% 32%;          /* rich glowing amber liquid #9b5608 */
+  --primary-foreground: 43 85% 97%;
+  --muted-foreground: 33 38% 37%; /* warm amber bronze #82623a */
+  --border: 40 68% 73%;           /* gilded champagne border #e9ca8b */
+  --card: 43 82% 95%;             /* luminous champagne froth cream #fdf7e8 */
+  --accent-sage: 110 16% 44%;     /* sustainability marker */
+  --accent-gold: 42.7 94% 51%;    /* vibrant glowing core gold #f7b40e */
+}
+
+@layer base {
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.76;
+    font-weight: 300;
+  }
+
+  h1, h2 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 400;
+    color: hsl(var(--foreground));
+  }
+
+  h1 {
+    font-size: clamp(38px, 4.8vw, 66px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+
+  h2 {
+    font-size: clamp(28px, 3.4vw, 44px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: clamp(18px, 2vw, 20px);
+    line-height: 1.35;
+  }
+}
+
+.eyebrow {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: hsl(var(--primary));
+}
+
+.editorial-price {
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 500;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbars with walnut touch */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent-gold));
+}
